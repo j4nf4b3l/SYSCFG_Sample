@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		E404597024DF31C2006FC848 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E404596F24DF31C2006FC848 /* ViewController.swift */; };
 		E404597224DF31C4006FC848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E404597124DF31C4006FC848 /* Assets.xcassets */; };
 		E404597524DF31C4006FC848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E404597324DF31C4006FC848 /* Main.storyboard */; };
+		E404597F24DF3367006FC848 /* ORSSerial in Frameworks */ = {isa = PBXBuildFile; productRef = E404597E24DF3367006FC848 /* ORSSerial */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E404597F24DF3367006FC848 /* ORSSerial in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +81,9 @@
 			dependencies = (
 			);
 			name = SYSCFG_Sample;
+			packageProductDependencies = (
+				E404597E24DF3367006FC848 /* ORSSerial */,
+			);
 			productName = SYSCFG_Sample;
 			productReference = E404596A24DF31C2006FC848 /* SYSCFG_Sample.app */;
 			productType = "com.apple.product-type.application";
@@ -107,6 +112,9 @@
 				Base,
 			);
 			mainGroup = E404596124DF31C2006FC848;
+			packageReferences = (
+				E404597D24DF3367006FC848 /* XCRemoteSwiftPackageReference "ORSSerialPort" */,
+			);
 			productRefGroup = E404596B24DF31C2006FC848 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -277,6 +285,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.j4nf4b3l.SYSCFG-Sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -295,6 +304,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.j4nf4b3l.SYSCFG-Sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -323,6 +333,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E404597D24DF3367006FC848 /* XCRemoteSwiftPackageReference "ORSSerialPort" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/armadsen/ORSSerialPort.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E404597E24DF3367006FC848 /* ORSSerial */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E404597D24DF3367006FC848 /* XCRemoteSwiftPackageReference "ORSSerialPort" */;
+			productName = ORSSerial;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E404596224DF31C2006FC848 /* Project object */;
 }
